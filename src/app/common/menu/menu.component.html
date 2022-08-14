@@ -1,0 +1,13 @@
+<div style="width: 100px;padding: 5px;">
+  <button style="width: 100%;" mat-button [matMenuTriggerFor]="client">Client</button>
+  <mat-menu #client="matMenu">
+    <button mat-menu-item (click)="navigateTo('get-client')">Get Client</button>
+    <button mat-menu-item (click)="navigateTo('get-all-client')">Get All Client</button>
+    <button mat-menu-item (click)="navigateTo('add-client')">Add Client</button>
+  </mat-menu>
+  <button style="width: 100%;" mat-button [matMenuTriggerFor]="account">Account</button>
+  <mat-menu #account="matMenu">
+    <button mat-menu-item (click)="navigateTo('add-deposit')">Add Deposit</button>
+    <button mat-menu-item (click)="navigateTo('withdraw-deposit')">Withdraw Deposit</button>
+  </mat-menu>
+</div>

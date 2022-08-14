@@ -1,0 +1,19 @@
+<mat-grid-list cols="2" rowHeight="5:1">
+  <mat-grid-tile>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Client ID</mat-label>
+      <input #input matInput placeholder="ID" />
+    </mat-form-field>
+    <button
+      style="margin-left: 5px"
+      mat-stroked-button
+      (click)="searchClient(+input.value)"
+      color="primary"
+    >
+      search
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    {{result}}
+  </mat-grid-tile>
+</mat-grid-list>

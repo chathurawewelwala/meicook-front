@@ -1,0 +1,15 @@
+<mat-grid-list cols="2" rowHeight="5:1">
+  <mat-grid-tile>
+    <button
+      style="margin-left: 5px"
+      mat-stroked-button
+      (click)="searchAllClient()"
+      color="primary"
+    >
+      search
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    {{ result }}
+  </mat-grid-tile>
+</mat-grid-list>

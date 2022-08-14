@@ -1,0 +1,42 @@
+<mat-grid-list cols="1" rowHeight="5:1">
+  <mat-grid-tile>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter Client First Name</mat-label>
+      <input #fName matInput placeholder="First Name" />
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field
+      class="example-full-width five-marging-left"
+      appearance="fill"
+    >
+      <mat-label>Enter Client Second Name</mat-label>
+      <input #sName matInput placeholder="Second Name" />
+    </mat-form-field>
+    <mat-form-field
+      class="example-full-width five-marging-left"
+      appearance="fill"
+    >
+      <mat-label>Enter Client Account Number</mat-label>
+      <input #accNumber matInput placeholder="Account Number" />
+    </mat-form-field>
+    <mat-form-field
+      class="example-full-width five-marging-left"
+      appearance="fill"
+    >
+      <mat-label>Enter Client Account balance</mat-label>
+      <input #accBalance matInput placeholder="Account balance" />
+    </mat-form-field>
+    <mat-form-field
+      class="example-full-width five-marging-left"
+      appearance="fill"
+    >
+      <mat-label>Enter Client Account Currency</mat-label>
+      <input #accCurrency matInput placeholder="Account Currency" />
+    </mat-form-field>
+
+    <button class="five-marging-left" (click)="addClient(fName.value,sName.value,accNumber.value,+accBalance.value,accCurrency.value)" mat-stroked-button color="primary">
+      Add
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>{{result}} </mat-grid-tile>
+</mat-grid-list>

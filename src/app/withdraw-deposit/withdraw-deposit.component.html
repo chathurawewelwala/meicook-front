@@ -1,0 +1,40 @@
+<mat-grid-list cols="1" rowHeight="5:1">
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter Account ID</mat-label>
+        <input #accId matInput placeholder="Account ID" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width five-marging-left" appearance="fill">
+        <mat-label>Enter Account Number</mat-label>
+        <input #accNumber matInput placeholder="Account Number" />
+      </mat-form-field>
+      <mat-form-field
+        class="example-full-width five-marging-left"
+        appearance="fill"
+      >
+        <mat-label>Withdraw Amount</mat-label>
+        <input #accAmount matInput placeholder="Deposit Amount" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width five-marging-left" appearance="fill">
+        <mat-label>Enter Account Currency</mat-label>
+        <input #accCurrency matInput placeholder="Account Currency" />
+      </mat-form-field>
+      <button
+        class="five-marging-left"
+        (click)="
+          withdrawDeposit(
+            +accId.value,
+            accNumber.value,
+            +accAmount.value,
+            accCurrency.value
+          )
+        "
+        mat-stroked-button
+        color="primary"
+      >
+        Withdraw Deposit
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <p style="text-align: center">{{ result }} </p>
+  
